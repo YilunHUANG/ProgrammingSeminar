@@ -73,7 +73,7 @@ main関数(上司)でオブジェクト君を召還して、オブジェクトに命令をする。
 ****
 #練習コード
 【成績管理のためのプログラム】
-(次Java担当する人はこれを発展させればいんじゃない?カプセル化とか))
+(次Java担当する人はこれを発展させればいんじゃない?カプセル化とか))  
 Mainクラス：<https://gist.github.com/takanari-seito/fc3b6b39905e42573c78>  
 Studentクラス:<https://gist.github.com/takanari-seito/af73c423acbfd172b519>
 
