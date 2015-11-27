@@ -78,7 +78,7 @@ optimizer.setup(model)
 
 ```py
 opt.zero_grads()    #勾配初期化
-loss,y=forward(x_train, t_train)    #順伝播から誤差を計算
+loss = forward(x_train, t_train)    #順伝播から誤差を計算
 loss.backward()   #誤差を逆伝播
 opt.update()    #重みの更新
 ```
