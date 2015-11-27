@@ -77,6 +77,8 @@ optimizer.setup(model)
 * 学習
 
 ```py
-opt = optimizers.SGD()      #重みの更新は勾配降下法を用いる。デフォルトの学習率はlr=0.01
-opt.setup(model)
+opt.zero_grads()    #勾配初期化
+loss,y=forward(x_train, t_train)    #順伝播から誤差を計算
+loss.backward()   #誤差を逆伝播
+opt.update()    #重みの更新
 ```
