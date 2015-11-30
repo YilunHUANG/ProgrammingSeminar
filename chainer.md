@@ -10,7 +10,8 @@
 Chainerでは型に関するエラーが1番多いと思われる。
 * Chainerに組み込まれている関数を使うには `chainer.Variable(変数)` を使用して、Chainer専用の型に変換する必要がある。
 * 変換する前の変数はnumpyのndarray型にする必要がある。
-* numpyのデフォルトはndarrayの64bit型だが32bit型である必要がある。`x.astype(np.float32), t.astype(np.int32)` で変える。
+* numpyのデフォルトはndarrayの64bit型だが32bit型である必要がある。
+  * `x.astype(np.float32), t.astype(np.int32)` 
 * 入力のndarrayはLinearに渡すときは(データの数,入力変数の数)の形にする。
   * `x_train = x_train.reshape(len(x_train),1)`
 * 入力をConvolution2Dに渡すときは画像を (nsample, channel, height, width) の4次元テンソルに変換
