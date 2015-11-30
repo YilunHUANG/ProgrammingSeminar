@@ -93,3 +93,20 @@ loss = forward(x_train, t_train)    #順伝播から誤差を計算
 loss.backward()   #誤差を逆伝播
 opt.update()    #重みの更新
 ```
+
+* 学習したモデルの保存
+```py
+import cPickle
+cPickle.dump(model, open("FILENAME.pkl", "wb"), -1)
+```
+
+* 学習したモデルのロード
+```py
+#学習したモデルのデータのロード
+import cPickle
+model = cPickle.load(open("FILENAME.pkl", "rb"))
+
+#学習した重み表示
+print model.l1.W
+print model.l1.b
+```
