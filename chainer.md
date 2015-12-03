@@ -1,4 +1,10 @@
 #Chainerまとめ
+Chainerのホームページは[こちら](http://chainer.org/index.html "Chainer")
+
+githubは[こちら](https://github.com/pfnet/chainer "Chainer github")
+
+インストールはPythonでpipコマンドを使って簡単にできる。
+`pip install chainer`
 
 ##Chainer特徴
 * pythonでニューラルネットワークを簡単に記述できる。
