@@ -14,7 +14,7 @@ Chainerでは型に関するエラーが1番多いと思われる。
 * numpyのデフォルトはndarrayの64bit型だが32bit型である必要がある。
   * `x.astype(np.float32), t.astype(np.int32)` 
 * 入力のndarrayはLinearに渡すときは(データの数,入力変数の数)の形にする。
-  * `x_train = x_train.reshape(len(x_train),1)`
+  * `x_train = x_train.reshape(len(x_train), 1)`
 * 入力をConvolution2Dに渡すときは画像を (nsample, channel, height, width) の4次元テンソルに変換
   * `X_train = x_train.reshape((len(x_train), 1, 28, 28))`
 
