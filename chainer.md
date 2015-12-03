@@ -17,6 +17,7 @@ Chainerでは型に関するエラーが1番多いと思われる。
   * `x_train = x_train.reshape(len(x_train), 1)`
 * 入力をConvolution2Dに渡すときは画像を (nsample, channel, height, width) の4次元テンソルに変換
   * `X_train = x_train.reshape((len(x_train), 1, 28, 28))`
+* 当然ながら各層の出力の数と次の層の入力の数が一致しているようなネットワークを書かないとエラーが起こる。
 
 ##ソースコード例
 * NNの記述
