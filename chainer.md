@@ -15,7 +15,7 @@ githubは[こちら](https://github.com/pfnet/chainer "Chainer github")
 
 ##注意するところ
 Chainerでは型に関するエラーが1番多いと思われる。
-* Chainerに組み込まれている関数を使うには `x = chainer.Variable(x_train)` を用いて、Chainer専用の型に変換する必要がある。
+* Chainerに組み込まれている関数を使うには `(変数名) = chainer.Variable(変換前変数)` を用いて、Chainer専用の型に変換する必要がある。
 * 変換する前の変数はnumpyのndarray型にする必要がある。
 * numpyのデフォルトはndarrayの64bit型だが32bit型である必要がある。
   * `x.astype(np.float32), t.astype(np.int32)` 
