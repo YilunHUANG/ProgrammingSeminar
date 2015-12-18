@@ -92,6 +92,6 @@ Some **ReponseGroup** we often use:
 
 
 ##Reference in Japanese
-(Go check it)[http://www.ajaxtower.jp/ecs/]
+[Go check it](http://www.ajaxtower.jp/ecs/)
 
  
