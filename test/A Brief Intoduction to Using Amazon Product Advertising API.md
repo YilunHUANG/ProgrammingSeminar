@@ -1,4 +1,4 @@
-﻿#A Brief Intoduction to Using Amazon Product Advertising API
+#A Brief Intoduction to Using Amazon Product Advertising API
 
 ---
 
@@ -89,5 +89,9 @@ Some **ReponseGroup** we often use:
 ##Receive a response(XML)
 * Use tools to extract information from XML 
 (It can be done by using any kinds of programing language, so I just skip here)
+
+
+##Reference in Japanese
+(Go check it)[http://www.ajaxtower.jp/ecs/]
 
  
