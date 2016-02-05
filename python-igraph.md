@@ -14,9 +14,7 @@ UNIX系はCのコンパイラがあれば`pip`でできるらしい(詳しくは
 * グラフに関する操作のライブラリ。PythonのほかにR,C++などでも利用可能。Pythonでは似たようなものに`networkx`がある。一般的にはRでigraphを、Pythonでnetworkxを利用しているらしい。igraphは中身はCで書かれているみたいで実行速度は速いらしい。python,igraphで検索しても日本語のサイトで充実しているのは少ないort
 
 ##ソースコード例
-
-* 学習したモデルの保存
 ```py
-import cPickle
-cPickle.dump(model, open("FILENAME.pkl", "wb"), -1)
+import igraph
 ```
+
