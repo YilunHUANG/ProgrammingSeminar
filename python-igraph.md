@@ -1,8 +1,14 @@
 #python-igraph まとめ
 igraphのホームページは[こちら](http://igraph.org/ "igraph")
 
-インストールは少しめんどくさい。windowsでは`pip`や`easy_install`が使えない。
-UNIX系はCのコンパイラがあれば`pip`でできるらしい(理由不明だが研究室のサーバでできなかった)　　
+windowsではインストールは少しめんどくさい。`pip`や`easy_install`が使えない。  
+UNIX系はCのコンパイラがあれば`pip`でできるらしい。  
+~~理由不明だが、研究室のサーバでできなかった(エラーコード : Could not download and compile the C core of igraph.)  
+コンパイラができてないっていわれた。~~
+
+(2/16 追記)  
+lxmlのビルドに必要なパッケージが不足していたらしい。`yum install libxslt-devel` でいれたら成功した。  
+[参考](https://teratail.com/questions/4839 "【Python】pip install が出来ない件について！")
 
 
 ##インストール方法(windows)
