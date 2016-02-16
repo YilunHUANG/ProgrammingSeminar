@@ -14,7 +14,7 @@ lxmlのビルドに必要なパッケージが不足していたらしい。`yum
 ##インストール方法(windows)
 * 別のライブラリ`wheel`をインストールする。
   * `pip install wheel` 
-* [このサイト](http://www.lfd.uci.edu/~gohlke/pythonlibs/)から自分のPythonのversionにあったpython-igraphのwhlファイルをダウンロードする。
+* [このサイト](http://www.lfd.uci.edu/~gohlke/pythonlibs/)から自分のPythonのversionにあったpython-igraphのwhlファイル(バイナリファイル)をダウンロードする。インストールにCコンパイラが必要でエラーとなるほかのライブラリもここで入手可能と思われる。
 * ダウンロード後  `pip install "ファイル名".whl` でインストール
 
 ##python-igraph
