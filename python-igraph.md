@@ -18,7 +18,7 @@ lxmlのビルドに必要なパッケージが不足していたらしい。`yum
 * ダウンロード後  `pip install "ファイル名".whl` でインストール
 
 ##python-igraph
-* グラフに関する操作のライブラリ。PythonのほかにR,C++などでも利用可能。Pythonでは似たようなものに`networkx`がある。一般的にはRでigraphを、Pythonでnetworkxを利用しているらしい。igraphは中身はCで書かれているみたいで実行速度は速い(らしい)。python,igraphで検索しても日本語のサイトで充実しているのは少ないort
+* グラフに関する操作のライブラリ。PythonのほかにR,C++などでも利用可能。Pythonでは似たようなものに`networkx`がある。一般的にはRでigraphを、Pythonでnetworkxを利用しているらしい。igraphは中身はCで書かれているみたいで実行速度は速いらしい(時間があれば速度を比較してみたい)。python,igraphで検索しても日本語のサイトで充実しているのは少ないort  
 
 ##ソースコード例
 ```py
