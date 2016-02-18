@@ -4,10 +4,10 @@ igraphのホームページは[こちら](http://igraph.org/ "igraph")
 windowsではインストールは少しめんどくさい。`pip`や`easy_install`が使えない。  
 UNIX系はCのコンパイラがあれば`pip`でできるらしい。  
 ~~理由不明だが、研究室のサーバでできなかった(エラーコード : Could not download and compile the C core of igraph.)  
-コンパイラができてないっていわれた。~~
+コンパイルができないっていわれた。~~
 
 (2/16 追記)  
-lxmlのビルドに必要なパッケージが不足していたらしい。`yum install libxslt-devel` でいれたら成功した。  
+lxmlのビルドに必要なパッケージが不足していたらしい。`yum install libxslt-devel` でインストールした後、`pip`を使ってインストールできた。  
 [参考](https://teratail.com/questions/4839 "【Python】pip install が出来ない件について！")
 
 
@@ -18,10 +18,18 @@ lxmlのビルドに必要なパッケージが不足していたらしい。`yum
 * ダウンロード後  `pip install "ファイル名".whl` でインストール
 
 ##python-igraph
-* グラフに関する操作のライブラリ。PythonのほかにR,C++などでも利用可能。Pythonでは似たようなものに`networkx`がある。一般的にはRでigraphを、Pythonでnetworkxを利用しているらしい。igraphは中身はCで書かれているみたいで実行速度は速いらしい(時間があれば速度を比較してみたい)。python,igraphで検索しても日本語のサイトで充実しているのは少ないort  
+* グラフに関する操作のライブラリ。PythonのほかにR,C++などでも利用可能。Pythonでは似たようなものに`networkx`がある。一般的にはRでigraphを、Pythonでnetworkxを利用しているらしい。igraphは中身はCで書かれていて、実行速度は速いらしい(時間があればnetworkxとpython-igraphで速度を比較してみたい)。python,igraphで検索しても日本語のサイトで充実しているのは少ないort  
 
 ##ソースコード例
+* インポート
 ```py
 import igraph
 ```
 
+* グラフ作成  
+引数の初期値は(n=None, edges=None, directed=None, graph_attrs=None, vertex_attrs=None, edge_attrs=None)  
+```py
+g0 = igraph.Graph()
+g1 = igraph.Graph(10)
+g2 = igraph.Graph(10, [(0,1), (0,2), (1,2)])
+```   
