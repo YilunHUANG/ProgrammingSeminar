@@ -51,3 +51,21 @@ g.delete_edges(None)
 g.delete_edges([0,1,3])
 g.delete_edges([(0,1), (0,2), (1,2)])
 ```
+
+* グラフの確認  
+```py
+print g           #辺のリストも表示する
+#出力例
+"""
+IGRAPH U--- 10 14 --
++ attr: id (v), label (v)
++ edges:
+0--2 0--3 0--6 1--2 1--9 2--8 3--9 4--5 4--7 5--6 8--9 0--1 0--8 1--8
+"""
+igraph.summary(g) #辺のリストを省略
+#出力例
+"""
+IGRAPH U--- 10 14 -- 
++ attr: id (v), label (v)
+"""
+```
