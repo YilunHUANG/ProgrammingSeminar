@@ -42,3 +42,12 @@ g.add_vertices(10)
 g.add_edge(0, 1)
 g.add_edges([(0,1), (0,2), (1,2)])
 ```
+
+* 頂点、辺の削除  
+```py
+g.delete_vertices(None)
+g.delete_vertices([0,3,5])
+g.delete_edges(None)
+g.delete_edges([0,1,3])
+g.delete_edges([(0,1), (0,2), (1,2)])
+```
