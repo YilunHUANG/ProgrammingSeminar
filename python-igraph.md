@@ -31,5 +31,14 @@ import igraph
 ```py
 g0 = igraph.Graph()
 g1 = igraph.Graph(10)
-g2 = igraph.Graph(10, [(0,1), (0,2), (1,2)])
+g2 = igraph.Graph([(0,1), (0,2), (1,2)])
+g3 = igraph.Graph(10, [(0,1), (0,2), (1,2)])
 ```   
+
+* 頂点、辺の追加  
+```py
+g.add_vertex()
+g.add_vertices(10)
+g.add_edge(0, 1)
+g.add_edges([(0,1), (0,2), (1,2)])
+```
