@@ -1,4 +1,4 @@
-#python-igraph まとめ
+# python-igraph まとめ
 igraphのホームページは[こちら](http://igraph.org/ "igraph")
 
 windowsではインストールは少しめんどくさい。`pip`や`easy_install`が使えない。  
@@ -11,16 +11,17 @@ lxmlのビルドに必要なパッケージが不足していたらしい。`yum
 [参考](https://teratail.com/questions/4839 "【Python】pip install が出来ない件について！")
 
 
-##インストール方法(windows)
+## インストール方法(windows)
 * 別のライブラリ`wheel`をインストールする。
   * `pip install wheel` 
 * [このサイト](http://www.lfd.uci.edu/~gohlke/pythonlibs/)から自分のPythonのversionにあったpython-igraphのwhlファイル(バイナリファイル)をダウンロードする。インストールにCコンパイラが必要でエラーとなるほかのライブラリもここで入手可能と思われる。
 * ダウンロード後  `pip install "ファイル名".whl` でインストール
 
-##python-igraph
+## python-igraph
 * グラフに関する操作のライブラリ。PythonのほかにR,C++などでも利用可能。Pythonでは似たようなものに`networkx`がある。一般的にはRでigraphを、Pythonでnetworkxを利用しているらしい。igraphは中身はCで書かれていて、実行速度は速いらしい(時間があればnetworkxとpython-igraphで速度を比較してみたい)。python,igraphで検索しても日本語のサイトで充実しているのは少ないort  
+グラフの参照渡しになっているメソッドが多いので、変更後のグラフと変更前のグラフを後で比較したいときはあらかじめ`copy_of_g = g.copy()`を使っておく必要がある。
 
-##ソースコード例
+## ソースコード例
 * インポート
 ```py
 import igraph
@@ -68,4 +69,19 @@ igraph.summary(g) #辺のリストを省略
 IGRAPH U--- 10 14 -- 
 + attr: id (v), label (v)
 """
+```
+
+* そのほか
+```py
+# グラフを有向(無向)グラフにする
+directed_graph = g.as_directed() #引数なし(True) -> 無向辺は両方向の2辺になる。 引数False -> 無向辺はノード番号が小から大への向き
+undirected_graph = g.as_undirected() #引数なし(True) -> 2方向の辺は1つの辺になる。 引数False -> 2方向の辺は2重辺のなる。
+
+# グラフを単純グラフにする
+g.simplify()
+
+# 隣接頂点(辺)を返す
+adjacent = g.adjacent(vertex)    #引数の頂点に隣接する辺のリストを返す。辺はid(記憶された順に0,1,2,...)で返される。
+neighbors = g.neighbors(vertex)  #引数の頂点に隣接する頂点のリストを返す。頂点はid(記憶された順に0,1,2,...)で返される。
+neighborhood = g.neighborhood(vertex, order = 1) #引数の頂点からorder以内のステップ数で辿り着ける頂点の集合(重みは考慮されないみたいです)
 ```
