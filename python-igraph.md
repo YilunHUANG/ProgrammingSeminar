@@ -14,12 +14,12 @@ lxmlのビルドに必要なパッケージが不足していたらしい。`yum
 ## インストール方法(windows)
 * 別のライブラリ`wheel`をインストールする。
   * `pip install wheel` 
-* [このサイト](http://www.lfd.uci.edu/~gohlke/pythonlibs/)から自分のPythonのversionにあったpython-igraphのwhlファイル(バイナリファイル)をダウンロードする。インストールにCコンパイラが必要でエラーとなるほかのライブラリもここで入手可能と思われる。
+* [このサイト](http://www.lfd.uci.edu/~gohlke/pythonlibs/)から自分のPythonのversionにあったpython-igraphのwhlファイル(バイナリファイル)をダウンロードする。ほかのライブラリもここで入手可。
 * ダウンロード後  `pip install "ファイル名".whl` でインストール
 
 ## python-igraph
 * グラフに関する操作のライブラリ。PythonのほかにR,C++などでも利用可能。Pythonでは似たようなものに`networkx`がある。一般的にはRでigraphを、Pythonでnetworkxを利用しているらしい。igraphは中身はCで書かれていて、実行速度は速いらしい(時間があればnetworkxとpython-igraphで速度を比較してみたい)。python,igraphで検索しても日本語のサイトで充実しているのは少ないort  
-グラフの参照渡しになっているメソッドが多いので、変更後のグラフと変更前のグラフを後で比較したいときはあらかじめ`copy_of_g = g.copy()`を使っておく必要がある。
+グラフの参照渡しになっているメソッドが多いので、変更後のグラフと変更前のグラフを後で比較したいときはあらかじめ`g1 = g.copy()`としてグラフのコピーをとる必要がある。
 
 ## ソースコード例
 * インポート
