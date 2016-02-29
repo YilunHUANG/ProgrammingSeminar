@@ -61,8 +61,7 @@ $ pyenv shell 3.4.4
 $ python -V
 Python 3.4.4
 $ logout
-```
-```shell-session
+
 $ python -V
 Python 2.7.10
 ```
